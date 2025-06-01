@@ -21,12 +21,12 @@ profitability across multiple dimensions such as Segment, Country, and Product.
 
 ## 📂 Contents
 
-| File/Folder                 | Description                             |
-|-----------------------------|-----------------------------------------|
-| `Financial Sample.xlsx`     | Dataset used for building the dashboard |
-| `SalesDashboard.pbix`       | Power BI dashboard file                 |
-| `Screenshot (106)/`         | Screenshots of the dashboard (optional) |
-| `README.md`                 | This project summary and documentation |
+| File                                     | Description                             |
+|------------------------------------------|-----------------------------------------|
+| `Financial Sample.xlsx`                  | Dataset used for building the dashboard |
+| `My Sales BI dashboard.pbix`             | Power BI dashboard file                 |
+| `Screenshot (106)/`                      | Screenshots of the dashboard (optional) |
+| `README.md` (Instructions included)      | This project summary and documentation  |
 
 ---
 
@@ -82,7 +82,91 @@ profitability across multiple dimensions such as Segment, Country, and Product.
 
 - Microsoft Financial Sample: [Download Link](https://learn.microsoft.com/en-us/power-bi/create-reports/sample-financial-download)
 
+
+
+--- Instructions--
+
+# 🧭 Step-by-Step Instructions: Power BI Sales Dashboard (Without Growth %)
+
+This guide walks you through the process of building a Sales Dashboard in Power BI using the **Financial Sample.xlsx** dataset.
+
 ---
+
+## 📁 1. Import the Dataset
+1. Open Power BI Desktop
+2. Click **Home > Get Data > Excel**
+3. Select and load `Financial Sample.xlsx`
+
+---
+
+## 💡 2. Create KPI Cards
+Use **Card visual** for each of the following:
+- Total **Sales**
+- Total **Profit**
+- **Profit Margin %** (Create a calculated column: `Profit Margin = Profit / Sales`)
+
+Steps:
+1. Insert > Card
+2. Drag `Sales` to the **Values** field
+3. Repeat for `Profit` and `Profit Margin`
+
+---
+
+## 📅 3. Time-Series Analysis
+1. Use a **Line Chart** to plot **Sales over Date**
+2. Drag `Date` to the Axis and `Sales` to Values
+3. Use another *Column Chart** for **Profit over Date**
+4. Drag `Date` to the Axis and `Profit` to Values
+
+Make sure `Date` is set to **date hierarchy** (Year, Month)
+
+---
+
+## 🧩 4. Add Slicers/Filters for Interactivity
+Add slicers for:
+- `Country`
+- `Segment`
+- `Product`
+
+
+Steps:
+1. Insert > Slicer
+2. Drag a categorical field to the slicer
+3. Format as Dropdown or List
+
+---
+
+## 📊 5. Add a Pie Chart (Sales by Segment)
+1. Insert > Pie Chart
+2. Drag `Segment` to Legend
+3. Drag `Sales` to Values
+
+Customize colors and enable data labels for clarity.
+
+---
+
+## 🎨 6. Apply a Consistent Color Theme
+1. Go to **View > Themes**
+2. Customize according to your preferences.
+
+
+## 📦 8. Save Your Work
+- Save as `My Sales BI dashboard.pbix`
+
+---
+
+## ✅ Output Summary
+
+Your dashboard should include:
+- Cards for Sales, Profit, and Profit Margin
+- Slicers for interactivity
+- Line charts for Sales & Profit over time
+- Pie chart for Sales by Segment
+- Theme and formatting for clean presentation
+
+---
+
+Built by: **Joseph R Pakhuongte**
 
 ## 📧 Author
 
